@@ -16,7 +16,7 @@ This project is a **FastAPI-based AI chatbot** that allows users to upload PDFs 
 
 ### 1️⃣ **Clone the Repository**
 ```sh
-git clone https://github.com/your-repo/Query_bot.git
+git clone https://github.com/gratefulvortex/Query_bot.git
 cd Query_bot
 ```
 
