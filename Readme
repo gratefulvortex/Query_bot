@@ -34,6 +34,7 @@ pip install -r requirements.txt
 
 ### 4️⃣ **Set Up Environment Variables**
 FOR GEMINI API KEY GO TO GOOGLE AI STUDIOS AND CREATE A KEY
+Set your API key :
 **Option 1: Using PowerShell (Windows)**
 ```powershell
 $env:GEMINI_API_KEY = "your-api-key"   (For current sesssion only)
