@@ -1,0 +1,12 @@
+asyncio
+fastapi
+google
+langchain
+langchain_community
+langchain_google_genai
+os
+pydantic
+requests
+shutil
+streamlit
+uvicorn

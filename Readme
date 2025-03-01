@@ -1,0 +1,126 @@
+# 🤖 AI PDF Chatbot 
+
+## 📌 Project Overview
+This project is a **FastAPI-based AI chatbot** that allows users to upload PDFs and interact with them using **Google Gemini AI**. The chatbot extracts text from PDFs, processes it into **FAISS vector embeddings**, and enables users to ask questions related to the content. The **Streamlit** interface provides an interactive front-end.
+
+## 🚀 Features
+- Upload PDFs and extract text
+- Store text embeddings using **FAISS**
+- Query the document and get responses using **Google Gemini AI**
+- Interactive chatbot UI with **Streamlit**
+- FastAPI backend for document processing and querying
+
+---
+
+## 🛠️ Installation & Setup
+
+### 1️⃣ **Clone the Repository**
+```sh
+git clone https://github.com/your-repo/Query_bot.git
+cd Query_bot
+```
+
+### 2️⃣ **Create a Virtual Environment** (Optional but Recommended)
+```sh
+python -m venv venv
+source venv/bin/activate  # macOS/Linux
+venv\Scripts\activate    # Windows
+```
+
+### 3️⃣ **Install Dependencies**
+```sh
+pip install -r requirements.txt
+```
+
+### 4️⃣ **Set Up Environment Variables**
+FOR GEMINI API KEY GO TO GOOGLE AI STUDIOS AND CREATE A KEY
+**Option 1: Using PowerShell (Windows)**
+```powershell
+$env:GEMINI_API_KEY = "your-api-key"   (For current sesssion only)
+```
+
+
+**Option 2: Using `.env` File**
+Create a `.env` file in the project root and add:
+```
+GEMINI_API_KEY=your-api-key
+```
+
+---
+
+## 🏃‍♂️ Running the Application
+On your terminal:
+
+### 1️⃣ **Start the FastAPI Server**
+```sh
+uvicorn main:app --reload
+
+```
+
+
+### 2️⃣ **Start the Streamlit UI**
+```sh
+streamlit run app.py
+```
+
+---
+
+## 📂 API Endpoints
+
+### 🔹 **Upload a PDF**
+- **Endpoint:** `POST /upload/`
+- **Request:** `multipart/form-data`
+- **Response:**
+```json
+{
+  "message": "✅ File uploaded and processed successfully!",
+  "filename": "example.pdf"
+}
+```
+
+### 🔹 **Query the Document**
+- **Endpoint:** `POST /query/`
+- **Request:**
+```json
+{
+  "query": "What is the main topic of the document?"
+}
+```
+- **Response:**
+```json
+{
+  "answer": "The document discusses artificial intelligence applications."
+}
+```
+
+---
+
+## 📜 Tech Stack
+- **Backend:** FastAPI, FAISS, LangChain, Google Gemini AI
+- **Frontend:** Streamlit
+- **Other:** Pydantic, Uvicorn, Python-dotenv
+
+---
+
+## 🛠 Dependencies
+```sh
+asyncio
+fastapi
+google
+langchain
+langchain_community
+langchain_google_genai
+os
+pydantic
+requests
+shutil
+streamlit
+uvicorn
+```
+
+---
+
+## 🤖 Author
+Sahil Naik
+[GitHub](https://github.com/gratefulvortex) |
+
